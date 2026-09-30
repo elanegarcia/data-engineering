@@ -2,7 +2,7 @@
 # Executa um notebook do workspace como run one-time em compute serverless.
 # Uso: scripts/rodar_notebook.sh <nome-do-notebook>
 set -euo pipefail
-PROFILE="${DATABRICKS_CONFIG_PROFILE:-alura-imersao}"
+PROFILE="${DATABRICKS_CONFIG_PROFILE:imersao}"
 export MSYS_NO_PATHCONV=1   # Git Bash no Windows converte /Workspace/... em C:/Program Files/...
 NB="${1:?informe o nome do notebook}"
 WS="${DATABRICKS_WORKSPACE_PATH:?defina DATABRICKS_WORKSPACE_PATH com a pasta dos notebooks}"

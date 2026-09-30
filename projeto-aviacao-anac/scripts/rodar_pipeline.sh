@@ -2,7 +2,7 @@
 # Dispara um update do pipeline e faz polling DO UPDATE (nao do pipeline).
 # Uso: scripts/rodar_pipeline.sh <pipeline_id> [--full-refresh]
 set -euo pipefail
-PROFILE="${DATABRICKS_CONFIG_PROFILE:-alura-imersao}"
+PROFILE="${DATABRICKS_CONFIG_PROFILE:imersao}"
 export MSYS_NO_PATHCONV=1
 PID="${1:?informe o pipeline_id}"; shift || true
 UPDATE=$(databricks pipelines start-update "$PID" "$@" -p "$PROFILE" -o json \

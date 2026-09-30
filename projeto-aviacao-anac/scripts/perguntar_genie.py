@@ -12,7 +12,7 @@ import subprocess
 import sys
 import time
 
-PERFIL = os.environ.get("DATABRICKS_CONFIG_PROFILE", "alura-imersao")
+PERFIL = os.environ.get("DATABRICKS_CONFIG_PROFILE", "imersao")
 SPACE = os.environ.get("GENIE_SPACE_ID")
 if not SPACE:
     raise SystemExit("Defina a variavel GENIE_SPACE_ID com o ID do seu espaco Genie.")
